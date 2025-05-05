@@ -1,40 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile</title>
+  <meta name="description" content="Professional profile of Jasser - UX/UI Designer and Web Developer">
+  <meta name="keywords" content="UX Design, UI Design, Web Development, F1, Motorbikes">
+  <meta name="king" content="Jasser">
+  <meta property="og:title" content="Jasser's Professional Profile">
+  <meta property="og:description" content="UX/UI Designer and Web Developer passionate about teaching code">
+  <meta property="og:image" content="images/cc.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Jasser | UX/UI Designer & Web Developer</title>
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Profile 1 -->
-    <div class="card">
-      <h1>Hello, I'm Jasser 😎</h1>
-      <img src="images/cc.jpg" alt="Jasser Photo" class="avatar">
-      <p>
-        I love Github, UX/UI Design, web-development and motorbikes 🏍️.
-        I aim to teach code to entrepreneurs and creative people around the world 🌍.
-      </p>
-      <a href="#" class="btn">Discover More</a>
-    </div>
-    <div class="card">
-      <h2><span class="highlight">UX/UI Design</span> 📐</h2>
-      <p>I am passionate about <strong>UX/UI Design</strong>.</p>
-    </div>
-    <div class="card">
-      <h1>I love F1 😎</h1>
-      <img src="images/kk.jpg" alt="F1 Photo" class="avatar">
-      <p>
-        I love F1 🌍.
-      </p>
-      <a href="#" class="btn">Discover More</a>
-    </div>
+  <header class="sr-only">
+    <h1>Jasser's Profile</h1>
+  </header>
 
-    <div class="card">
-      <h2><span class="highlight">UX/UI</span> 📐</h2>
-      <p>I am passionate about <strong>traveling</strong>.</p>
+  <main>
+    <div class="container">
+      <!-- Profile Section -->
+      <article class="card profile-card" aria-labelledby="profile-heading">
+        <header>
+          <h1 id="profile-heading">Hello, I'm Jasser <span aria-hidden="true">😎</span></h1>
+          <figure>
+            <img src="cc.jpg" alt="Jasser smiling at the camera" class="avatar" width="200" height="200" loading="lazy">
+            <figcaption class="sr-only">Jasser's profile picture</figcaption>
+          </figure>
+        </header>
+        <div class="profile-content">
+          <p>
+            I love <strong>GitHub</strong>, <strong>UX/UI Design</strong>, <strong>web development</strong> and <strong>motorbikes</strong> <span aria-hidden="true">🏍️</span>.
+            I aim to teach code to entrepreneurs and creative people around the world <span aria-hidden="true">🌍</span>.
+          </p>
+        </div>
+        <footer>
+          <a href="#more-about-me" class="btn btn-primary" aria-label="Discover more about Jasser">Discover More</a>
+        </footer>
+      </article>
+      <article class="card skill-card" aria-labelledby="design-heading">
+        <header>
+          <h2 id="design-heading"><span class="highlight">UX/UI Design</span> <span aria-hidden="true">📐</span></h2>
+        </header>
+        <div class="skill-content">
+          <p>I am passionate about <strong>UX/UI Design</strong> and creating intuitive user experiences.</p>
+        </div>
+      </article>
+      <article class="card hobby-card" aria-labelledby="f1-heading">
+        <header>
+          <h1 id="f1-heading">I love Formula 1 <span aria-hidden="true">😎</span></h1>
+          <figure>
+            <img src="kk.jpg" alt="Formula 1 car racing on track" class="avatar" width="200" height="200" loading="lazy">
+            <figcaption class="sr-only">Formula 1 racing car</figcaption>
+          </figure>
+        </header>
+        <div class="hobby-content">
+          <p>
+            I'm an avid Formula 1 fan who follows races worldwide <span aria-hidden="true">🌍</span>.
+          </p>
+        </div>
+        <footer>
+          <a href="#f1-passion" class="btn btn-secondary" aria-label="Discover more about my F1 passion">Discover More</a>
+        </footer>
+      </article>
+      <article class="card travel-card" aria-labelledby="travel-heading">
+        <header>
+          <h2 id="travel-heading"><span class="highlight">Travel</span> <span aria-hidden="true">✈️</span></h2>
+        </header>
+        <div class="travel-content">
+          <p>I am passionate about <strong>traveling</strong> and exploring different cultures.</p>
+        </div>
+      </article>
     </div>
-  </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Jasser. All rights reserved.</p>
+      <nav aria-label="Social media links">
+        <ul class="social-links">
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jasser-rahal-1347b0351/" target="_blank" rel="https://www.linkedin.com/in/jasser-rahal-1347b0351/" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', function() {
+      const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+      
+      if ('IntersectionObserver' in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              let lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.classList.remove('lazy');
+              lazyImageObserver.unobserve(lazyImage);
+            }
+          });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+          lazyImageObserver.observe(lazyImage);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
