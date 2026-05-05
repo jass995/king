@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Prix De Tunis — Inscription F1 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header" id="accueil">
+    <div class="header-top">
+      <div class="logo">
+        <span class="logo-badge">F1</span>
+        <span class="logo-text">GP<strong>TUNIS</strong></span>
+      </div>
+
+      <h1 class="site-title">GRAND PRIX DE TUNIS <span class="year">2026</span></h1>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#programme">Programme</a></li>
+          <li><a href="#inscription">Inscription</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header-stripe"></div>
+  </header>
+
+  <!-- ============== MAIN ============== -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="programme">
+      <div class="hero-visual">
+        <img
+          src="https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/cea1/live/1de105b0-f5a5-11ef-bcea-7b70a14a5556.jpg"
+          alt="Voiture de Formule 1 sur circuit"
+          class="hero-img"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">🏁 Saison 2026 — Nouveau Circuit</p>
+        <h2 class="hero-title">LE GRAND PRIX<br><span>DES SABLES</span></h2>
+        <p class="hero-desc">Trois jours de vitesse, de passion et d'adrénaline au cœur de Tunis. Accédez aux paddocks, vivez les qualifications et ressentez l'intensité de la course. Réservez votre place maintenant.</p>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-val">3</span><span class="stat-label">Jours</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat"><span class="stat-val">20</span><span class="stat-label">Écuries</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat"><span class="stat-val">50K+</span><span class="stat-label">Spectateurs</span></div>
+        </div>
+        <a href="#inscription" class="cta-btn">Réserver ma place →</a>
+      </div>
+    </section>
+
+    <!-- FORMULAIRE -->
+    <section class="form-section" id="inscription">
+      <div class="form-header">
+        <p class="form-eyebrow">🎟 Billetterie officielle</p>
+        <h2>Formulaire d'inscription</h2>
+      </div>
+
+      <!-- Panneau résumé d'erreurs -->
+      <div id="error-summary" class="error-summary" hidden>
+        <strong>⚠ <span id="error-count">0</span> problème(s) à corriger :</strong>
+        <ul id="error-list"></ul>
+      </div>
+
+      <form id="registration-form" novalidate>
+
+        <fieldset>
+          <legend>👤 Informations personnelles</legend>
+
+          <label for="fullname">Nom complet *</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Omar Al-Farsi" />
+
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="omar@example.com" />
+
+          <label for="age">Âge (18 ans minimum) *</label>
+          <input type="number" id="age" name="age" min="0" placeholder="28" />
+        </fieldset>
+
+        <fieldset>
+          <legend>🎟 Détails du billet</legend>
+
+          <label for="ticket">Type de billet *</label>
+          <select id="ticket" name="ticket">
+            <option value="">— Choisir —</option>
+            <option value="standard">Paddock Pass — 149€</option>
+            <option value="vip">VIP Tribune — 349€</option>
+            <option value="cosmic">Hospitalité Legends — 699€</option>
+          </select>
+
+          <label for="quantity">Quantité (minimum 1) *</label>
+          <input type="number" id="quantity" name="quantity" min="0" placeholder="2" />
+
+          <p class="group-label">Jours souhaités * (au moins un)</p>
+          <div class="checkbox-group">
+            <label class="inline"><input type="checkbox" name="days" value="vendredi" /> Essais libres — Vendredi</label>
+            <label class="inline"><input type="checkbox" name="days" value="samedi" /> Qualifications — Samedi</label>
+            <label class="inline"><input type="checkbox" name="days" value="dimanche" /> Course — Dimanche</label>
+          </div>
+
+          <p class="group-label">Écurie favorite *</p>
+          <div class="radio-group">
+            <label class="inline team-label ferrari"><input type="radio" name="team" value="ferrari" /> <span>Ferrari</span></label>
+            <label class="inline team-label redbull"><input type="radio" name="team" value="redbull" /> <span>Red Bull</span></label>
+            <label class="inline team-label mercedes"><input type="radio" name="team" value="mercedes" /> <span>Mercedes</span></label>
+            <label class="inline team-label mclaren"><input type="radio" name="team" value="mclaren" /> <span>McLaren</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>💬 Demandes</legend>
+          <label for="message">Demandes particulières *</label>
+          <textarea id="message" name="message" rows="4" placeholder="Allergies, accessibilité, besoins spécifiques..."></textarea>
+
+          <label class="inline cgu">
+            <input type="checkbox" id="cgu" name="cgu" />
+            J'accepte les conditions générales d'utilisation *
+          </label>
+        </fieldset>
+
+        <button type="submit" class="submit-btn">🏎️ Envoyer mon inscription</button>
+      </form>
+
+      <div id="success-message" class="success" hidden>
+        ✅ Inscription confirmée ! Bienvenue au Grand Prix de Tunis 2026.
+      </div>
+    </section>
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-badge">F1</span>
+          <span class="logo-text">GP<strong>TUNIS</strong></span>
+        </div>
+        <p>L'expérience Formule 1 au cœur de l'Afrique du Nord.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📧 contact@gptunis2026.com</p>
+        <p>📞 +216 71 123 456</p>
+        <p>📍 Circuit International de Tunis</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Suivez-nous</h3>
+        <ul class="social">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 Grand Prix de Tunis — Formula 1 — Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
